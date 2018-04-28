@@ -7,8 +7,23 @@ import React, {Component} from 'react';
 
 //stateful component - class component - smart component
 class SearchBar extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = { term: 'placeholder' };
+    }
+
     render() {
-        return  <input onChange={event => console.log(event.target.value)}/>;
+        return ( 
+            <div>
+                <input 
+                value={this.state.term}
+                onClick={event => this.setState({ term: '' })}
+                onChange={event => this.setState({ term: event.target.value })}
+                />
+                <p>The value is: <i>{this.state.term}</i></p>
+            </div>
+        );
     }
 };
 
