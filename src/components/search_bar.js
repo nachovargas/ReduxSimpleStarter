@@ -1,5 +1,15 @@
 import React from 'react';
 
-const SearchBar = () => {
-    return <input />
+//stateless component - functional component - dummy component
+// const SearchBar = () => {
+//     return <input />;
+// };
+
+//stateful component - class component - smart component
+class SearchBar extends React.Component {
+    render() {
+        return  <input />;
+    }
 };
+
+export default SearchBar;
